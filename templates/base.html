@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MYPortfolio.io</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='base.css')}}">
+    <script src="https://kit.fontawesome.com/88904dd6ba.js" crossorigin="anonymous"></script>
+    <style>
+        .fa{padding-top:20px;padding-right: 10px;}
+        li{padding:20px;}
+        li > a{text-decoration: none;color:white;text-decoration: none;}
+        .profile a {text-decoration: none;}
+        body{user-select: none;}
+        .about:hover{background: rgb(255, 0, 149);cursor: pointer;border-radius: 10px;transition-duration: 0.3s;}
+        .about{font-size: 110%;}
+        .mainskill{background: rgb(255, 0, 149);border-radius: 10px;}
+    </style>
+  </head>
+  <body style="background:#EAEDED;" onload="alert('I never dreamed about success. I worked for it.” —Estée Lauder')">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 backchange"style="background: linear-gradient(to right,#1A5276,#04F4FC);height:80vh;">
+              <div class="row justify-content-end">
+                <div class="col" style="padding:18px;color:white;"><h6>MEET ME</h6></div>
+                <div class="col-6 menu">
+                  <ul style="display:flex;list-style: none;">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Projects</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#hireme">Contact</a></li>
+                  </ul>
+                </div>
+                <div id="bars" class="col-3">
+                <i class="fa-solid fa-bars " ></i>
+ 
+                </div>
+                
+
+              </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-center" >
+        <div class="col-lg-8 col-11"  style="background:#ffffff;margin-top:-330px;border-radius: 20px;box-shadow: 0px 5px 10px ;">
+          <div class="row justify-content-center">
+            <img class="col-md-6 col-5 mainimg" src="{{url_for('static',filename='images/myphoto.png')}}" alt="">
+            <div class="col-md-6 col-7  profile">
+              <p class="text-muted">HELLO EVERYBODY, I AM</p>
+              <h2>SACHIN <br>KUMAR SINGH</h2>
+              <h6>Developer | Learner | Typist | Photoshop Editor | Devotee</h6>
+              <p class="text-muted">You may lost Everything in life but whatever you have learnt will remain throughout your life</p>
+              <i class="fa fa-solid fa-envelope"></i><a href="" class="text-muted">1234@gmail.com</a><br>
+              <i class=" fa fa-brands fa-github"></i><a href=""class="text-muted">gitsachinhun</a><br>
+              <i class="fa fa-solid fa-phone"></i><a href="tel:+919113367466"class="text-muted">call me</a><br>
+              <i class="fa fa-solid fa-location-crosshairs"></i><a href=""class="text-muted">Jharkhand, Jamshedpur</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><br><br>
+        <!-- ************about me************ -->
+    <div class="container">
+      <div class="row">
+        <img src="{{url_for('static',filename='images/myphoto1.jpg')}}" alt="" class="col-md-5 col-6">
+        <div class="col-md-7 col-6 aboutme">
+          <h3 id="about">About Me</h3>
+          <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, rem. Quibusdam modi totam sunt, iure delectus minus rerum consequatur harum atque obcaecati nobis </p>
+          <div class="row" id="aboutself" style="border: 1px solid black;border-radius: 10px;">
+            <div class="col about about1 mainskill">MainSkills</div>
+            <div class="col about about2 award">Awards</div>
+            <div class="col about about3 experience">Experience</div>
+            <div class="col about about4 education">Education</div>
+          </div><br>
+          <div class="row">
+            <p class="text-muted">Others Skills</p>
+            <div class="progress">
+              <div class="progress-bar bg-success" role="progressbar" aria-label="Success example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">30%</div>
+            </div><br>
+            <p class="text-muted">Coding</p>
+            <div class="progress">
+              <div class="progress-bar bg-info" role="progressbar" aria-label="Info example" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+            </div><br>
+            <p class="text-muted">Designing</p>
+            <div class="progress">
+              <div class="progress-bar bg-dark" role="progressbar" aria-label="Warning example" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+            </div><br>
+            <p class="text-muted">Development</p>
+            <div class="progress">
+              <div class="progress-bar bg-danger" role="progressbar" aria-label="Danger example" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">85%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container menubar">
+      <div class="row justify-content-center">
+        <div class="col-md-5 col-8">
+          <ul class="navbar" id="navbar">
+            <li><a href="">Home</a></li>
+            <li><a href="">Projects</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <br><br><br>
+    <div class="container">
+      <div class="row ">
+        <div class="col text-center">
+          <h3>Have a Look to my Works</h3>
+        </div>
+        <div class="row justify-content-around">
+          <div class="card col-md-5" style="background:rgb(193, 199, 202);">
+            <img src="{{url_for('static',filename='images/card.png')}}" alt="" class="card-img-top" >
+            <div class="card-body">
+              <h5 class="card-title">
+                MY Github Profile
+              </h5>
+              <div class="card-text">
+                Show my all the projects and works on Github 
+              </div>
+              <a href="" class="btn btn-primary">Github</a>
+            </div>
+          </div>
+          <div class="card col-md-5" >
+            <img src="{{url_for('static',filename='images/linkdln.jpg')}}" alt="" class="card-img-top" style="height:150% ;">
+            <div class="card-body">
+              <h5 class="card-title">
+                MY Linkdln Profile
+              </h5>
+              <div class="card-text">
+                View my Work job Profile on Linkdln to Know more about me. feel free to know about me
+              </div>
+              <a href="" class="btn btn-primary">LInkdln</a>
+  
+            </div>
+          </div>
+        </div>
+      </div><br>
+      <div class="row">
+        <h3 class="col text-center">
+          Connect with me on social Media
+        </h3>
+      </div>
+      <div class="row justify-content-around">
+        <div class="card col-md-5">
+          <img src="{{url_for('static',filename='images/fb.jpg')}}" alt="" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">
+              My Facbook Profile
+            </h5>
+            <div class="card-text">
+              Visit my Facbook Profile to connect with me socially.
+            </div>
+            <div class="btn btn-primary">
+              Facebook
+            </div>
+          </div>
+        </div>
+        <div class="card col-md-5">
+          <img src="{{url_for('static',filename='images/insta.jpg')}}" alt="" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">
+              My Instagram Profile
+            </h5>
+            <div class="card-text">
+              Visit my Instagram Profile to connect with me socially and to view my Reels
+            </div>
+            <div class="btn btn-primary">
+              Facebook
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><br><br><br>
+    <div class="container">
+      <div class="row justify-content-center bg-dark text-white ">
+        <div class="col-md-6 p-5" id="hiretome">
+          <p  style="color:rgb(255, 0, 157);font-weight: bold;">Let's Say Hi</p>
+          <h3 id="hireme">Hire Me.</h3>
+          <div class="row">
+            <div class="col">Call Us directly</div>
+            <div class="col">9113367466</div>
+          </div>
+          <div class="row">
+            <div class="col">Contact Email</div>
+            <div class="col">sachinkumarsingh51110@gmail.com</div>
+          </div><br>
+          <form action="" method="post">
+            <input type="text" class="form-control bg-dark text-white" placeholder="Enter your name" required><br>
+
+            <input type="number" class="form-control bg-dark text-white" placeholder="Enter your Phone" required><br>
+            <input type="email" class="form-control bg-dark text-white" placeholder="Enter your Email" required><br>
+            <textarea name="" id="" cols="70" rows="3" placeholder="Your Words Please..." class="form-control bg-dark text-white"></textarea><br>
+            <button type="submit" class="btn btn-dark btn-outline-light">Submit</button>
+          </form>  
+        </div>
+        <img src="{{url_for('static',filename='images/hireimg.jpg')}}" alt="" class="col-md-6">
+      </div>
+    </div><br><br><br>
+    <div class="container">
+      <div class="row bg-dark text-white p-3">
+        <div class="col text-center">
+          <h4>Thanku For Being Taking interest on me <i class="fa-solid fa-face-smile ps-3" style="color:yellow;font-size: 120%;"></i></h4>
+        </div>
+
+      </div>
+    </div>
+    
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script>
+      var happy=<i class="fa-solid fa-face-smile-hearts"></i>;
+      var z=document.querySelector("#bars");
+      var y=document.querySelector("#navbar");
+      var k=document.querySelector(".fa-bars").addEventListener('click',showmenu);
+      var body=document.querySelector("body");
+      function showmenu(){
+        if(y.style.display=='none'){
+          y.style.display='block';
+        }else{
+          y.style.display='none';
+        }
+        
+
+      }
+    </script>
+  </body>
+</html>
+
