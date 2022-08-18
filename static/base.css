@@ -17,6 +17,7 @@
 }
 @media screen and (max-width:800px) {
     #hiretome{font-size:80%;}
+    .nav{display: flex; flex-direction: row;}
 }
 
 #navbar{z-index:999;list-style: none;display: flex;flex-direction: column;margin-top: -380px;background:#58D68D;border-radius: 20px;box-shadow:100px 100px 450px;display: none;text-align: center;animation: showmenu 1s ease 1 ;transform: scale(1.3);}

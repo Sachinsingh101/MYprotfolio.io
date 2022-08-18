@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MYPortfolio.io</title>
+    <!-- *************FAVICON************ -->
+    <link rel="icon" type="image/jpg" href="{{url_for('static',filename='images/fb.jpg')}}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="{{url_for('static',filename='base.css')}}">
     <script src="https://kit.fontawesome.com/88904dd6ba.js" crossorigin="anonymous"></script>
@@ -18,18 +20,18 @@
         .mainskill{background: rgb(255, 0, 149);border-radius: 10px;}
     </style>
   </head>
-  <body style="background:#EAEDED;" onload="alert('I never dreamed about success. I worked for it.” —Estée Lauder')">
+  <body style="background:#EAEDED;" onload="alert('I never dreamed about success. I worked for it.” —Estée Lauder')" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="75">
     <div class="container">
         <div class="row">
             <div class="col-12 backchange"style="background: linear-gradient(to right,#1A5276,#04F4FC);height:80vh;">
               <div class="row justify-content-end">
                 <div class="col" style="padding:18px;color:white;"><h6>MEET ME</h6></div>
                 <div class="col-6 menu">
-                  <ul style="display:flex;list-style: none;">
+                  <ul style="display:flex;list-style: none;" class="navbar">
                     <li><a href="">Home</a></li>
                     <li><a href="">Projects</a></li>
                     <li><a href="">Blog</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="#aboutme">About</a></li>
                     <li><a href="#hireme">Contact</a></li>
                   </ul>
                 </div>
@@ -62,41 +64,68 @@
           </div>
         </div>
       </div>
-    </div><br><br>
+    </div><br><br><br>
         <!-- ************about me************ -->
     <div class="container">
-      <div class="row">
-        <img src="{{url_for('static',filename='images/myphoto1.jpg')}}" alt="" class="col-md-5 col-6">
-        <div class="col-md-7 col-6 aboutme">
-          <h3 id="about">About Me</h3>
-          <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, rem. Quibusdam modi totam sunt, iure delectus minus rerum consequatur harum atque obcaecati nobis </p>
-          <div class="row" id="aboutself" style="border: 1px solid black;border-radius: 10px;">
-            <div class="col about about1 mainskill">MainSkills</div>
-            <div class="col about about2 award">Awards</div>
-            <div class="col about about3 experience">Experience</div>
-            <div class="col about about4 education">Education</div>
-          </div><br>
-          <div class="row">
-            <p class="text-muted">Others Skills</p>
-            <div class="progress">
-              <div class="progress-bar bg-success" role="progressbar" aria-label="Success example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">30%</div>
-            </div><br>
-            <p class="text-muted">Coding</p>
-            <div class="progress">
-              <div class="progress-bar bg-info" role="progressbar" aria-label="Info example" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
-            </div><br>
-            <p class="text-muted">Designing</p>
-            <div class="progress">
-              <div class="progress-bar bg-dark" role="progressbar" aria-label="Warning example" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
-            </div><br>
-            <p class="text-muted">Development</p>
-            <div class="progress">
-              <div class="progress-bar bg-danger" role="progressbar" aria-label="Danger example" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">85%</div>
+      <div class="row justify-content-center" >
+        <div class="col-lg-8 col-sm-10 col-12 text-black" style="background-image:url({{url_for('static',filename='images/myphoto1.jpg')}}); background-size:cover; border-radius:10px;">
+          <h2 class="text-center p-2" id="aboutme">About Me</h2>
+          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active text-black" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Main Skill</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link text-black" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Education</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link text-black" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" disabled>Awards</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link text-black" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled" aria-selected="false" disabled>Eperience</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+              <div class="row">
+                <div class="col-6">
+                  <h3>Other Skills</h3>
+                  <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" aria-label="Success example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                  </div><br>
+                  <h3>Coding</h3>
+                  <div class="progress">
+                    <div class="progress-bar bg-info" role="progressbar" aria-label="Info example" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">60%</div>
+                  </div><br>
+                  <h3>Development</h3>
+                  <div class="progress">
+                    <div class="progress-bar bg-warning" role="progressbar" aria-label="Warning example" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">80%</div>
+                  </div><br>
+                  <h3>Learning</h3>
+                  <div class="progress">
+                    <div class="progress-bar bg-danger" role="progressbar" aria-label="Danger example" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">90%</div>
+                  </div><br>
+                </div>
+              </div>
             </div>
+            <div class="tab-pane fade text-white" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+              <h3>Btech</h3>
+              <p class="text-white">Currently Pursuing Btech Course form Arka Jain <br> university Jamshedpur</p>
+              <br>
+              <h3>Developer</h3>
+              <p class="text-white">I am a self Learned Full Stack web developer.</p>
+              <br>
+              <h3>Typist</h3>
+              <p class="text-white">I have typing Eperience for more than 3 years <br> I can type at a speed of 60 wpm.</p>
+              <br>
+              <!-- <h3>Photoshop Tools</h3>
+              <p class="text-white">I have an average Eperience with pohotshop Products</p> -->
+            </div>
+            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">...</div>
+            <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab" tabindex="0">...</div>
           </div>
         </div>
       </div>
-    </div>
+    </div>  <br>
     <div class="container menubar">
       <div class="row justify-content-center">
         <div class="col-md-5 col-8">
@@ -216,27 +245,8 @@
       </div>
     </div>
     
-
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    <script>
-      var happy=<i class="fa-solid fa-face-smile-hearts"></i>;
-      var z=document.querySelector("#bars");
-      var y=document.querySelector("#navbar");
-      var k=document.querySelector(".fa-bars").addEventListener('click',showmenu);
-      var body=document.querySelector("body");
-      function showmenu(){
-        if(y.style.display=='none'){
-          y.style.display='block';
-        }else{
-          y.style.display='none';
-        }
-        
 
-      }
-    </script>
   </body>
 </html>
 
